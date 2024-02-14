@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function TopBar({ href, children }) {
     return (
-        <div className="bg-darken-jungle-green flex justify-center">
+        <div className="flex justify-center bg-darken-jungle-green">
             <a
                 href={href}
                 className="max-container py-2 text-sm font-medium text-white/75 transition hover:text-white"
