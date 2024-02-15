@@ -5,7 +5,7 @@ function TopBar({ href, children }) {
         <div className="flex justify-center bg-darken-jungle-green">
             <a
                 href={href}
-                className="max-container py-2 text-sm font-medium text-white/75 transition hover:text-white"
+                className="max-container hidden py-2 text-sm font-medium text-white/75 transition hover:text-white md:block"
             >
                 {children}
             </a>
