@@ -1,3 +1,4 @@
+import HeroSection from "./components/sections/Hero";
 import NavBar from "./components/ui/NavBar";
 
 function App() {
@@ -5,8 +6,11 @@ function App() {
         <>
             <NavBar topBar={true} />
             <main>
-                {/* TODO: Create section for website contents. */}
+                <HeroSection />
             </main>
+            <footer>
+                {/* TODO: Create footer component */}
+            </footer>
         </>
     );
 }
