@@ -23,7 +23,7 @@ function LinkLists() {
     return (
         <>
             <ul
-                className={`absolute left-0 top-full ${navBarActive ? undefined : "hidden"} w-full flex-col items-center gap-0 bg-white md:static md:flex md:w-fit md:flex-row md:gap-3.5`}
+                className={`absolute left-0 top-full ${navBarActive ? undefined : "hidden"} w-full flex-col items-center gap-0 rounded-b-lg bg-white md:static md:flex md:w-fit md:flex-row md:gap-3.5`}
             >
                 <LinkItem className={itemClasses} title="Services" href="/" />
                 <LinkItem className={itemClasses} title="Company" href="/" />
@@ -43,7 +43,7 @@ function LinkLists() {
                     <div className="mx-auto h-1 w-20 rounded-full bg-slate-200" />
                 </li>
                 <LinkItem
-                    className={`block sm:hidden md:block ${itemClasses}`}
+                    className={`block sm:hidden md:block ${itemClasses} mb-5 md:mb-0`}
                     title="Contact"
                     href="/"
                     highlight

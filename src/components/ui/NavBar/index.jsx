@@ -8,7 +8,7 @@ import LinkLists from "./LinkLists";
 
 function NavBar({ topBar }) {
     return (
-        <header className="sticky top-0 z-10 border-b border-red-200">
+        <header className="sticky top-0 z-50 bg-white">
             {topBar && (
                 <TopBar href="https://mediaindonesia.com/humaniora/560191/pt-dksi-luncurkan-solusi-peralatan-telemedice-teranyar">
                     {
@@ -16,7 +16,7 @@ function NavBar({ topBar }) {
                     }
                 </TopBar>
             )}
-            <nav className="max-container flex h-20 items-center justify-between bg-white">
+            <nav className="max-container flex h-20 items-center justify-between">
                 <a href="/" className="inline-flex items-center gap-4">
                     <img
                         src={`${logoCrown}`}
