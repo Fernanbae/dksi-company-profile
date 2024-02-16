@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        background-color: #f9fafe;
+    }
+    
     .max-container {
         @apply mx-auto max-w-7xl px-5;
     }

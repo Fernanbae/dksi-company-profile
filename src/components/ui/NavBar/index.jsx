@@ -1,35 +1,43 @@
 import PropTypes from "prop-types";
 
 import TopBar from "./TopBar";
-
-import logoCrown from "../../../assets/sprites/logo-crown.svg";
-import logoText from "../../../assets/sprites/logo-text.svg";
 import LinkLists from "./LinkLists";
+import LinkItem from "./LinkItem.jsx";
+import NavBrand from "./NavBrand.jsx";
 
-function NavBar({ topBar }) {
+import { HEADER as HeaderContent } from "../../../constants/AppContent.js";
+
+function NavBar() {
     return (
         <header className="sticky top-0 z-50 bg-white">
-            {topBar && (
-                <TopBar href="https://mediaindonesia.com/humaniora/560191/pt-dksi-luncurkan-solusi-peralatan-telemedice-teranyar">
-                    {
-                        "[New] Introducing cutting-edge telemedicine equipment solutions! More Information ->"
-                    }
+            {HeaderContent.topBar.enable == true && (
+                <TopBar href={HeaderContent.topBar.href}>
+                    {HeaderContent.topBar.text}
                 </TopBar>
             )}
             <nav className="max-container flex h-20 items-center justify-between">
-                <a href="/" className="inline-flex items-center gap-4">
-                    <img
-                        src={`${logoCrown}`}
-                        alt="A regal crown design representing DKSI, with intricate details and a majestic presence."
-                        className="w-10"
-                    />
-                    <img
-                        src={`${logoText}`}
-                        alt="A black and white image of the letters 'DKSI' written in a bold font on a plain background."
-                        className="hidden w-16 sm:block"
-                    />
-                </a>
-                <LinkLists />
+                <NavBrand
+                    logoIcon={HeaderContent.brand.icon.src}
+                    altLogoIcon={HeaderContent.brand.icon.alt}
+                    enableLogoText={HeaderContent.brand.text.enable}
+                    logoText={HeaderContent.brand.text.src}
+                    altLogoText={HeaderContent.brand.text.alt}
+                />
+                <LinkLists
+                    highlightLink={{
+                        name: HeaderContent.highlightLink.name,
+                        href: HeaderContent.highlightLink.href,
+                    }}
+                >
+                    {HeaderContent.links.map((link) => (
+                        <LinkItem
+                            key={link.name}
+                            className="w-full px-5 md:w-fit md:px-0"
+                            title={link.name}
+                            href={link.href}
+                        />
+                    ))}
+                </LinkLists>
             </nav>
         </header>
     );

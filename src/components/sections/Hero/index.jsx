@@ -4,7 +4,7 @@ import HeroParagraph from "./HeroParagraph";
 import HeroTagline from "./HeroTagline";
 import HeroImage from "./HeroImage";
 
-import imgHero from "../../../assets/img/achieved.png";
+import { SECTION_HERO as SectionContent } from "../../../constants/AppContent.js";
 
 function HeroSection() {
     return (
@@ -12,18 +12,15 @@ function HeroSection() {
             <HeroBackdrop />
             <div className="max-container relative mx-auto flex max-w-[52rem] flex-col items-center gap-8 pt-16 text-center text-white">
                 <HeroTagline
-                    firstTagline="Empowering Possibilities"
-                    secondTagline="Unleashing Solutions"
+                    firstTagline={SectionContent.tagline[0]}
+                    secondTagline={SectionContent.tagline[1]}
                 />
-                <HeroParagraph>
-                    Harness the power of cutting-edge ICT solutions to propel
-                    your business forward and stay ahead in today&apos;s
-                    competitive landscape.
-                </HeroParagraph>
-                <ButtonDiscover>Discover more about us</ButtonDiscover>
+                <HeroParagraph>{SectionContent.paragraph}</HeroParagraph>
+                <ButtonDiscover>{SectionContent.linkText}</ButtonDiscover>
                 <HeroImage
-                    href="https://soloaja.co/read/muhammad-yasin-pengusaha-muda-semarang-raih-anugerah-mitra-terbaik-diktiristek"
-                    img={imgHero}
+                    img={SectionContent.imageShowcase.src}
+                    alt={SectionContent.imageShowcase.alt}
+                    href={SectionContent.imageShowcase.href}
                 />
             </div>
         </section>
