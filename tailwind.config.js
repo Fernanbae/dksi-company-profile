@@ -5,6 +5,10 @@ export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            backgroundImage: {
+                "hero-abstract":
+                    "url('https://raw.githubusercontent.com/fernanbae/dksi-company-profile/main/src/assets/element/hero-abstract.svg')",
+            },
             colors: {
                 "darken-jungle-green": "#0B1F2A",
                 "metallic-sunburst": "#AA823C",
