@@ -20,6 +20,15 @@ export default {
             fontFamily: {
                 sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
             },
+            keyframes: {
+                "spin-reverse": {
+                    to: { transform: "rotate(-360deg)" },
+                },
+            },
+            animation: {
+                "spin-slow": "spin 30s linear infinite",
+                "spin-reverse-slow": "spin-reverse 25s linear infinite",
+            },
         },
     },
     plugins: [],
