@@ -14,7 +14,7 @@ function LinkLists({ highlightLink, children }) {
     return (
         <>
             <ul
-                className={`absolute left-0 top-full ${linksCollapse ? "hidden" : undefined} w-full flex-col items-center gap-0 rounded-b-lg bg-white md:static md:flex md:w-fit md:flex-row md:gap-3.5`}
+                className={`absolute left-0 top-full ${linksCollapse ? "hidden" : undefined} w-full flex-col items-center gap-0 rounded-b-lg bg-white md:static md:flex md:w-fit md:flex-row md:gap-3.5 md:border-none border-b border-b-zinc-100`}
             >
                 {children}
                 <li className="my-4 block md:hidden ">

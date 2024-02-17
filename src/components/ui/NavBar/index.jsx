@@ -9,7 +9,7 @@ import { HEADER as HeaderContent } from "../../../constants/AppContent.js";
 
 function NavBar() {
     return (
-        <header className="sticky top-0 z-50 bg-white">
+        <header className="sticky top-0 z-50 border-b border-b-zinc-100 bg-white">
             {HeaderContent.topBar.enable == true && (
                 <TopBar href={HeaderContent.topBar.href}>
                     {HeaderContent.topBar.text}
