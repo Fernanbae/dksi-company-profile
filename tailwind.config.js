@@ -16,6 +16,7 @@ export default {
                 "anti-flash-white": "#F2F2F2",
                 "satin-sheen-gold": "#CA9D42",
                 eggshell: "#F4EBD9",
+                "ghost-white": "#FEFDF9",
             },
             fontFamily: {
                 sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
