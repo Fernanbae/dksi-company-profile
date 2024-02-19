@@ -1,11 +1,19 @@
 import PropTypes from "prop-types";
+
+import { useSwiper } from "swiper/react";
+
 import { cn } from "../../../lib/utils";
 
-function TimelineButton({ icon, altIcon, active, onSelect }) {
+function TimelineButton({ icon, altIcon, active, onSelect, targetSlide }) {
+    const swiper = useSwiper();
+
     return (
         <button
             type="button"
-            onClick={onSelect}
+            onClick={() => {
+                swiper.slideTo(targetSlide, 500);
+                onSelect();
+            }}
             className={cn(
                 // element
                 "relative z-10",
@@ -48,6 +56,7 @@ TimelineButton.propTypes = {
     altIcon: PropTypes.string,
     active: PropTypes.bool,
     onSelect: PropTypes.func,
+    targetSlide: PropTypes.number,
 };
 
 export default TimelineButton;

@@ -4,6 +4,9 @@ import { useState } from "react";
 import TimelineLists from "../../ui/Timeline/TimelineLists";
 import TimelineItem from "../../ui/Timeline/TimelineItem";
 import TimelineButton from "../../ui/Timeline/TimelineButton";
+import TimelineShowcase from "../../ui/Timeline/TimelineShowcase";
+
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { cn } from "../../../lib/utils";
 import clsx from "clsx";
@@ -15,9 +18,18 @@ function CompanyTimeline({ TimelineContent }) {
         setActiveTimeline(timelineIndex);
     }
 
+    function handleSlideChange(activeShowcase) {
+        setActiveTimeline(activeShowcase);
+    }
+
     return (
-        <>
-            <TimelineLists>
+        <Swiper
+            className="w-full"
+            spaceBetween={50}
+            slidesPerView={1}
+            onSlideChange={(swiper) => handleSlideChange(swiper.activeIndex)}
+        >
+            <TimelineLists slot="container-start">
                 {TimelineContent.map((content, index) => (
                     <TimelineItem
                         key={content.id}
@@ -35,11 +47,23 @@ function CompanyTimeline({ TimelineContent }) {
                             altIcon={content.icon.alt}
                             active={activeTimeline === index}
                             onSelect={() => handleSelectTimeline(index)}
+                            targetSlide={index}
                         />
                     </TimelineItem>
                 ))}
             </TimelineLists>
-        </>
+            {TimelineContent.map((content) => (
+                <SwiperSlide key={content.id} className="">
+                    <TimelineShowcase
+                        img={content.icon.src}
+                        alt={content.icon.alt}
+                        title={content.title}
+                    >
+                        {content.description}
+                    </TimelineShowcase>
+                </SwiperSlide>
+            ))}
+        </Swiper>
     );
 }
 
