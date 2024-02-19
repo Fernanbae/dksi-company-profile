@@ -208,9 +208,16 @@ import timelineIcon3 from "../assets/sprites/timeline-icon/timeline3.svg";
 import timelineIcon4 from "../assets/sprites/timeline-icon/timeline4.svg";
 import timelineIcon5 from "../assets/sprites/timeline-icon/timeline5.svg";
 import timelineIcon6 from "../assets/sprites/timeline-icon/timeline6.svg";
+import companyIllustration from "../assets/illustration/section-company.svg";
 
 /* Content */
 const SECTION_COMPANY = {
+    header: {
+        title: "Empowering %Growth Together",
+        heading: "From Humble Beginnings to Shared Success Stories",
+        description:
+            "At 'Empowering Growth Together', we take pride in our journey as a company. Starting from humble beginnings, we have grown steadily, building strong partnerships and achieving remarkable milestones along the way.",
+    },
     // Timestamp presentation limited to 6
     timeline: [
         {
@@ -219,9 +226,11 @@ const SECTION_COMPANY = {
                 src: timelineIcon1,
                 alt: "Iconic image of a golden house with a radio, representing modern home automation",
             },
+            showcaseImage:
+                "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: "Established in 2019, we embarked on our journey.",
             description:
-                "Our journey started in 2019 with aspirations for industry success. Committed to excellence and growth for our valued clients.",
+                "In 2019, our journey commenced with ambitious aspirations for success within the industry. We embarked on this journey with a steadfast commitment to excellence and continuous growth, driven by our dedication to serving our valued clients.",
         },
         {
             id: "timeline2",
@@ -231,7 +240,7 @@ const SECTION_COMPANY = {
             },
             title: "Providing PC Notebooks through E-Katalog LKPP.",
             description:
-                "We started by offering PC notebooks through E-Katalog LKPP, marking the first step towards providing innovative solutions to our customers.",
+                "We embarked on our journey by introducing PC notebooks via E-Katalog LKPP. This marked our initial stride in delivering innovative solutions to meet the diverse needs of our customers.",
         },
         {
             id: "timeline3",
@@ -274,6 +283,27 @@ const SECTION_COMPANY = {
                 "We offer efficient Structured Cabling Systems (SCS) for seamless connectivity, ensuring uninterrupted data flow and smooth operations.",
         },
     ],
+    about: {
+        content: {
+            heading: "Why %should you% choose us for your %Business%?",
+            item: [
+                {
+                    title: "Always as Professional Partner",
+                    description:
+                        "We excel in delivering innovative, tailored solutions for your business, ensuring success in the dynamic world of technology.",
+                },
+                {
+                    title: "Proper steps for solutions",
+                    description:
+                        "We deliver efficient problem-solving with effective steps for optimal business solutions.",
+                },
+            ],
+        },
+    },
+    illustration: {
+        src: companyIllustration,
+        alt: "",
+    },
 };
 
 // ========================================================
