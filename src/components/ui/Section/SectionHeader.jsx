@@ -1,10 +1,19 @@
 import PropTypes from "prop-types";
+import { cn } from "../../../lib/utils";
 
-function SectionHeader({ title, heading, children }) {
+function SectionHeader({ title, heading, className, children }) {
     const titleBuilder = title.split("%");
 
     return (
-        <div className="mx-auto flex max-w-2xl flex-col gap-8 px-5 text-center">
+        <div
+            className={cn(
+                "flex flex-col gap-8",
+                "mx-auto",
+                "px-5",
+                "text-center",
+                className,
+            )}
+        >
             <h1 className="text-4xl font-semibold text-darken-jungle-green">
                 {titleBuilder[0]}
                 {titleBuilder[1] && (
@@ -27,6 +36,7 @@ function SectionHeader({ title, heading, children }) {
 SectionHeader.propTypes = {
     title: PropTypes.string,
     heading: PropTypes.string,
+    className: PropTypes.string,
     children: PropTypes.node,
 };
 
