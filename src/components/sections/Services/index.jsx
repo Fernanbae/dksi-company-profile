@@ -6,13 +6,17 @@ import { SECTION_SERVICES as SectionContent } from "../../../constants/AppConten
 
 function ServicesSection() {
     return (
-        <section className="overflow-hidden bg-white/90" id="services">
+        <section
+            className="overflow-hidden rounded-b-[75px] bg-white/90"
+            id="services"
+        >
             <div className="relative mx-auto max-w-7xl px-5 py-16 sm:py-32">
                 <ServicesSprites animate />
                 <div className="flex flex-col gap-12">
                     <SectionHeader
                         title={SectionContent.header.title}
                         heading={SectionContent.header.heading}
+                        className="max-w-2xl"
                     >
                         {SectionContent.header.description}
                     </SectionHeader>
