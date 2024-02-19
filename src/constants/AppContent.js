@@ -198,6 +198,85 @@ const SECTION_SERVICES = {
 };
 
 // ========================================================
+// * SECTION: COMPANY
+// ========================================================
+
+/* Assets Import */
+import timelineIcon1 from "../assets/sprites/timeline-icon/timeline1.svg";
+import timelineIcon2 from "../assets/sprites/timeline-icon/timeline2.svg";
+import timelineIcon3 from "../assets/sprites/timeline-icon/timeline3.svg";
+import timelineIcon4 from "../assets/sprites/timeline-icon/timeline4.svg";
+import timelineIcon5 from "../assets/sprites/timeline-icon/timeline5.svg";
+import timelineIcon6 from "../assets/sprites/timeline-icon/timeline6.svg";
+
+/* Content */
+const SECTION_COMPANY = {
+    // Timestamp presentation limited to 6
+    timeline: [
+        {
+            id: "timeline1",
+            icon: {
+                src: timelineIcon1,
+                alt: "Iconic image of a golden house with a radio, representing modern home automation",
+            },
+            title: "Established in 2019, we embarked on our journey.",
+            description:
+                "Our journey started in 2019 with aspirations for industry success. Committed to excellence and growth for our valued clients.",
+        },
+        {
+            id: "timeline2",
+            icon: {
+                src: timelineIcon2,
+                alt: "Golden house with a gear icon symbolizing innovation and functionality",
+            },
+            title: "Providing PC Notebooks through E-Katalog LKPP.",
+            description:
+                "We started by offering PC notebooks through E-Katalog LKPP, marking the first step towards providing innovative solutions to our customers.",
+        },
+        {
+            id: "timeline3",
+            icon: {
+                src: timelineIcon3,
+                alt: "Gleaming gold house featuring a square box structure on its rooftop",
+            },
+            title: "Expanded our services to include cutting-edge CCTV Security Systems.",
+            description:
+                "As we evolved, our commitment to safety and security led us to offer state-of-the-art CCTV Security Systems.",
+        },
+        {
+            id: "timeline4",
+            icon: {
+                src: timelineIcon4,
+                alt: "Golden building icon, symbolizing elegance and strength",
+            },
+            title: "Our expertise extends to designing and building innovative applications.",
+            description:
+                "Our expertise goes beyond boundaries, empowering businesses with futuristic solutions for the digital landscape.",
+        },
+        {
+            id: "timeline5",
+            icon: {
+                src: timelineIcon5,
+                alt: "Square-shaped brown building with glass windows",
+            },
+            title: "Providing high-quality audiovisual solutions.",
+            description:
+                "We enhance experiences and communication through advanced technology, elevating interactions and engagements.",
+        },
+        {
+            id: "timeline6",
+            icon: {
+                src: timelineIcon6,
+                alt: "Sophisticated brown and gold building icon, showcasing modern architecture",
+            },
+            title: "Encompass structured Cabling Systems (SCS) for seamless connectivity.",
+            description:
+                "We offer efficient Structured Cabling Systems (SCS) for seamless connectivity, ensuring uninterrupted data flow and smooth operations.",
+        },
+    ],
+};
+
+// ========================================================
 // * CONTENT EXPORT
 // ========================================================
 
@@ -207,4 +286,5 @@ export {
     SECTION_OFFERING,
     SECTION_OVERVIEW,
     SECTION_SERVICES,
+    SECTION_COMPANY,
 };

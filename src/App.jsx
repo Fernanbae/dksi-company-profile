@@ -1,3 +1,4 @@
+import CompanySection from "./components/sections/Company";
 import HeroSection from "./components/sections/Hero";
 import OfferingSection from "./components/sections/Offering";
 import OverviewSection from "./components/sections/Overview";
@@ -13,6 +14,7 @@ function App() {
                 <OfferingSection />
                 <OverviewSection />
                 <ServicesSection />
+                <CompanySection />
             </main>
             <footer>{/* TODO: Create footer component */}</footer>
         </>
