@@ -3,6 +3,7 @@ import HeroSection from "./components/sections/Hero";
 import OfferingSection from "./components/sections/Offering";
 import OverviewSection from "./components/sections/Overview";
 import ServicesSection from "./components/sections/Services";
+import Footer from "./components/ui/Footer";
 import NavBar from "./components/ui/NavBar";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
                 <ServicesSection />
                 <CompanySection />
             </main>
-            <footer>{/* TODO: Create footer component */}</footer>
+            <Footer />
         </>
     );
 }
