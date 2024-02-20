@@ -45,6 +45,96 @@ const HEADER = {
 };
 
 // ========================================================
+// * FOOTER
+// ========================================================
+
+/* Assets Import */
+import brandTextWhite from "../assets/sprites/logo-text-white.svg";
+
+/* Content */
+const FOOTER = {
+    brand: {
+        icon: {
+            src: brandIcon,
+            alt: "A regal crown design representing DKSI, with intricate details and a majestic presence.",
+        },
+        text: {
+            enable: true,
+            src: brandTextWhite,
+            alt: 'A black and white image of the letters "DKSI" written in a bold font on a plain background.',
+        },
+        description:
+            "Harness the power of cutting-edge ICT solutions to propel your business forward and stay ahead in today's competitive landscape.",
+    },
+    socialButton: [
+        {
+            platform: "instagram",
+            link: "https://www.instagram.com/duakawansejahteraindonesia/",
+        },
+        {
+            platform: "linkedin-box",
+            link: "https://www.linkedin.com/company/pt-dua-kawan-sejahtera-indonesia/about/",
+        },
+        {
+            platform: "facebook-box",
+            link: "https://www.facebook.com/duakawansejahteraindonesia/",
+        },
+    ],
+    section: {
+        contact: {
+            title: "Contact",
+            list: [
+                {
+                    type: "mail-open",
+                    at: "sales@dksi.co.id",
+                },
+                {
+                    type: "phone",
+                    at: "+62 298 343-6504",
+                },
+                {
+                    type: "smartphone",
+                    at: "+62 823-2702-696",
+                },
+            ],
+        },
+        hours: {
+            title: "Working Hours",
+            text: ["Mon – Fri: 8:00 am to 5:00 pm", "Sat - Sun: Closed"],
+        },
+        address: [
+            {
+                title: "Office Jakarta",
+                text: [
+                    "Jl. Letjen M.T Haryono No.Kav 22,",
+                    "RT 10/RW 09, Tebet Tim.,",
+                    "Kec. Tebet, Kota Jakarta",
+                    "Selatan, Daerah Khusus Ibukota",
+                    "Jakarta 12820",
+                ],
+            },
+            {
+                title: "Office Salatiga",
+                text: [
+                    "Kalipanggang, RT.04/RW.10,",
+                    "Candirejo, Tuntang,",
+                    "Kab. Semarang, Salatiga",
+                ],
+            },
+        ],
+    },
+    copyright: {
+        logo: {
+            enable: true,
+            src: brandIcon,
+            alt: "A regal crown design representing DKSI, with intricate details and a majestic presence.",
+        },
+        name: "PT Dua Kawan Sejahtera Indonesia",
+        text: "Copyrights © 2023. All rights reserved.",
+    },
+};
+
+// ========================================================
 // * SECTION: HERO
 // ========================================================
 
@@ -317,4 +407,5 @@ export {
     SECTION_OVERVIEW,
     SECTION_SERVICES,
     SECTION_COMPANY,
+    FOOTER,
 };
