@@ -397,6 +397,70 @@ const SECTION_COMPANY = {
 };
 
 // ========================================================
+// * SECTION: CONTACT
+// ========================================================
+
+import headerSprite from "../assets/element/contact-header.svg";
+import contactIllustration from "../assets/illustration/section-contact.svg";
+
+/* Content */
+const SECTION_CONTACT = {
+    header: {
+        title: "Have a business problem?",
+        description:
+            "Just contact us without hesitation, we have a team of experts creates some exclusive ways to solve our customer's problems",
+        sprite: { src: headerSprite, alt: "" },
+        buttonText: "Contact",
+    },
+    form: {
+        header: {
+            title: "Get in touch",
+            description:
+                "How can we assist you? We're here to make a difference!",
+        },
+        input: [
+            {
+                id: "firstName",
+                label: "First Name",
+                autoComplete: "given-name",
+                type: "text",
+                maxWidth: false,
+            },
+            {
+                id: "lastName",
+                label: "Last Name",
+                autoComplete: "family-name",
+                type: "text",
+                maxWidth: false,
+            },
+            {
+                id: "email",
+                label: "Email",
+                autoComplete: "email",
+                type: "email",
+                maxWidth: true,
+            },
+            {
+                id: "phoneNumber",
+                label: "Phone number",
+                autoComplete: "tel",
+                type: "tel",
+                maxWidth: true,
+            },
+        ],
+    },
+    illustration: {
+        src: contactIllustration,
+        alt: "",
+    },
+    textArea: {
+        id: "message",
+        label: "Message",
+    },
+    submitButtonText: "Let's Talk",
+};
+
+// ========================================================
 // * CONTENT EXPORT
 // ========================================================
 
@@ -407,5 +471,6 @@ export {
     SECTION_OVERVIEW,
     SECTION_SERVICES,
     SECTION_COMPANY,
+    SECTION_CONTACT,
     FOOTER,
 };
