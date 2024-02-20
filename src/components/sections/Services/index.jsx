@@ -1,14 +1,16 @@
+import PropTypes from "prop-types";
+
 import SectionHeader from "../../ui/Section/SectionHeader";
 import ServicesItem from "./ServicesItem.jsx";
 import ServicesSprites from "./ServicesSprites.jsx";
 
 import { SECTION_SERVICES as SectionContent } from "../../../constants/AppContent.js";
 
-function ServicesSection() {
+function ServicesSection({ id }) {
     return (
         <section
             className="overflow-hidden rounded-b-[75px] bg-white/90"
-            id="services"
+            id={id}
         >
             <div className="relative mx-auto max-w-7xl px-5 py-16 sm:py-32">
                 <ServicesSprites animate />
@@ -50,6 +52,6 @@ function ServicesSection() {
     );
 }
 
-ServicesSection.propTypes = {};
+ServicesSection.propTypes = { id: PropTypes.string };
 
 export default ServicesSection;

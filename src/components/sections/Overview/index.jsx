@@ -1,11 +1,16 @@
-import OverviewLists from "./OverviewLists";
+import PropTypes from "prop-types";
 
-import { SECTION_OVERVIEW as SectionContent } from "../../../constants/AppContent.js";
+import OverviewLists from "./OverviewLists";
 import OverviewItem from "./OverviewItem";
 
-function OverviewSection() {
+import { SECTION_OVERVIEW as SectionContent } from "../../../constants/AppContent.js";
+
+function OverviewSection({ id }) {
     return (
-        <section className="overflow-hidden bg-white py-16 rounded-t-[75px]">
+        <section
+            className="overflow-hidden rounded-t-[75px] bg-white py-16"
+            id={id}
+        >
             <div className="max-container">
                 <OverviewLists>
                     {SectionContent.map((content) => (
@@ -22,6 +27,6 @@ function OverviewSection() {
     );
 }
 
-OverviewSection.propTypes = {};
+OverviewSection.propTypes = { id: PropTypes.string };
 
 export default OverviewSection;

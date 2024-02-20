@@ -1,12 +1,14 @@
+import PropTypes from "prop-types";
+
 import CompanyTimeline from "./CompanyTimeline";
 import CompanySubHeading from "./CompanySubHeading.jsx";
 import SectionHeader from "../../ui/Section/SectionHeader";
 
 import { SECTION_COMPANY as SectionContent } from "../../../constants/AppContent.js";
 
-function CompanySection() {
+function CompanySection({ id }) {
     return (
-        <section className="py-16 sm:py-32" id="company">
+        <section className="py-16 sm:py-32" id={id}>
             <div className="max-container overflow-hidden">
                 <SectionHeader
                     title={SectionContent.header.title}
@@ -51,6 +53,6 @@ function CompanySection() {
     );
 }
 
-CompanySection.propTypes = {};
+CompanySection.propTypes = { id: PropTypes.string };
 
 export default CompanySection;
