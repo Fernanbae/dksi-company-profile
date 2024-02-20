@@ -47,11 +47,6 @@ function LinkItem({
                             ></i>
                         </div>
                     </button>
-                    {/* <div
-                        className={`absolute left-0 top-full ${dropdownActive ? "" : "hidden"} w-full overflow-hidden transition`}
-                    >
-                        {children}
-                    </div> */}
                     {dropdownActive && (
                         <div className="static left-0 top-full w-full md:absolute">
                             {children}
