@@ -1,4 +1,5 @@
 import CompanySection from "./components/sections/Company";
+import ContactSection from "./components/sections/Contact";
 import HeroSection from "./components/sections/Hero";
 import OfferingSection from "./components/sections/Offering";
 import OverviewSection from "./components/sections/Overview";
@@ -12,10 +13,11 @@ function App() {
             <NavBar />
             <main>
                 <HeroSection />
-                <OfferingSection />
-                <OverviewSection />
-                <ServicesSection />
-                <CompanySection />
+                <OfferingSection id="offering" />
+                <OverviewSection id="overview" />
+                <ServicesSection id="services" />
+                <CompanySection id="company" />
+                <ContactSection id="contact" />
             </main>
             <Footer />
         </>
