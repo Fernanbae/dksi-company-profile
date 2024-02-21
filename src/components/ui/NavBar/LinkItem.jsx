@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import { cn } from "../../../lib/utils";
+
 function LinkItem({
     title,
     href,
@@ -10,18 +12,34 @@ function LinkItem({
     className,
     children,
 }) {
+    function handleAnchorClick(event, targetSection) {
+        event.preventDefault();
+
+        const section = document.querySelector(targetSection);
+        section.scrollIntoView();
+    }
+
     const itemClasses =
         "rounded-none md:rounded-md px-0 md:px-3 py-3.5 md:py-2 font-medium text-darken-jungle-green transition md:hover:bg-gray-200 w-full md:w-fit md:border-none border-b border-slate-200";
     const itemHighlightClasses =
         "text-center rounded-md px-3 py-2 text-white font-medium bg-gradient-to-r from-metallic-sunburst to-satin-sheen-gold w-full md:w-fit relative group";
+
     return (
         <li
-            className={`relative flex md:static ${dropdown ? "flex-col" : undefined} ${className}`}
+            className={cn(
+                "relative md:static",
+                ["flex", { "flex-col": dropdown === true }],
+                className,
+            )}
         >
             {!dropdown ? (
                 <a
                     href={href}
-                    className={highlight ? itemHighlightClasses : itemClasses}
+                    onClick={(event) => handleAnchorClick(event, href)}
+                    className={cn({
+                        [itemHighlightClasses]: highlight === true,
+                        [itemClasses]: !highlight,
+                    })}
                 >
                     {title}
                     {highlight && (
@@ -33,17 +51,29 @@ function LinkItem({
                     <button
                         type="button"
                         onClick={onToggle}
-                        className={`${itemClasses} inline-flex justify-between md:justify-normal`}
+                        className={cn(
+                            "inline-flex justify-between md:justify-normal",
+                            itemClasses,
+                        )}
                     >
                         <span className="mr-1.5">{title}</span>
                         <div
-                            className={`transition ${dropdownActive ? "rotate-180" : undefined}`}
+                            className={cn("transition", {
+                                "rotate-180": dropdownActive === true,
+                            })}
                         >
                             <i
-                                className={`
-                                ri-arrow-down-s-line arrow-down-solutions text-darken-jungle-green/50 transition-all
-                                ${dropdownActive ? "font-bold text-metallic-sunburst" : undefined}
-                                `}
+                                className={cn(
+                                    "ri-arrow-down-s-line",
+                                    [
+                                        "text-darken-jungle-green/50",
+                                        {
+                                            "font-bold text-metallic-sunburst":
+                                                dropdownActive === true,
+                                        },
+                                    ],
+                                    "transition-all",
+                                )}
                             ></i>
                         </div>
                     </button>

@@ -7,8 +7,18 @@ function NavBrand({
     logoText,
     altLogoText,
 }) {
+    function handleClick(event) {
+        event.preventDefault();
+
+        window.scrollTo({ top: 0 });
+    }
+
     return (
-        <a href="/" className="inline-flex items-center gap-4">
+        <a
+            href="/"
+            onClick={(e) => handleClick(e)}
+            className="inline-flex items-center gap-4"
+        >
             <img src={`${logoIcon}`} alt={altLogoIcon} className="w-10" />
             {enableLogoText && (
                 <img

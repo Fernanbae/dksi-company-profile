@@ -5,14 +5,7 @@ import LinkItem from "./LinkItem";
 import LinkItemButton from "./LinkItemButton";
 
 function LinkLists() {
-    // const [dropdownActive, setDropdownActive] = useState("");
     const [navBarActive, setNavBarActive] = useState(false);
-
-    // function handleToggleDropdown(dropdown) {
-    //     setDropdownActive((prevDropdownActive) =>
-    //         prevDropdownActive === dropdown ? "" : dropdown,
-    //     );
-    // }
 
     function handleToggleNavBar() {
         setNavBarActive((prevNavBarActive) => !prevNavBarActive);
@@ -28,17 +21,6 @@ function LinkLists() {
                 <LinkItem className={itemClasses} title="Services" href="/" />
                 <LinkItem className={itemClasses} title="Company" href="/" />
                 <LinkItem className={itemClasses} title="Partners" href="/" />
-                {/* <LinkItem
-                    title="Solutions"
-                    href="/"
-                    dropdown={true}
-                    dropdownActive={dropdownActive === "solutions"}
-                    onToggle={() => handleToggleDropdown("solutions")}
-                    className={itemClasses}
-                >
-                    <ul className="max-container grid max-h-96 grid-cols-1 gap-5 overflow-y-scroll bg-red-100 md:grid-cols-2 lg:grid-cols-3"></ul>
-                </LinkItem> */}
-                {/* Separator */}
                 <li className="my-4 block md:hidden ">
                     <div className="mx-auto h-1 w-20 rounded-full bg-slate-200" />
                 </li>

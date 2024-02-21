@@ -27,20 +27,20 @@ const HEADER = {
     links: [
         {
             name: "Services",
-            href: "/",
+            href: "#services",
         },
         {
             name: "Company",
-            href: "/",
+            href: "#company",
         },
         {
             name: "Partners",
-            href: "/",
+            href: "#partners",
         },
     ],
     highlightLink: {
         name: "Contact",
-        href: "/",
+        href: "#contact",
     },
 };
 
