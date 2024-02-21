@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Fragment } from "react";
 
 function CompanySubHeading({ text }) {
     const textBuilder = text.split("%");
@@ -6,14 +7,19 @@ function CompanySubHeading({ text }) {
         <h1 className="text-primary-blue text-4xl font-semibold leading-tight">
             {textBuilder.map((splitText, index) => {
                 if (index % 2 === 0) {
-                    return <>{splitText}</>;
+                    return (
+                        <Fragment key={`companySubHeading$${index}`}>
+                            {splitText}
+                        </Fragment>
+                    );
                 } else {
                     return (
-                        <>
-                            <span className="font-bold text-satin-sheen-gold">
-                                {splitText}
-                            </span>
-                        </>
+                        <span
+                            key={`companySubHeading$${index}`}
+                            className="font-bold text-satin-sheen-gold"
+                        >
+                            {splitText}
+                        </span>
                     );
                 }
             })}

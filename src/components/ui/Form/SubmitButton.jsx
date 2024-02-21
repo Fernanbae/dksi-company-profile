@@ -5,7 +5,8 @@ import { cn } from "../../../lib/utils";
 function SubmitButton({ textButton, onSubmit }) {
     return (
         <button
-            type={onSubmit}
+            type="submit"
+            onClick={onSubmit}
             className={cn(
                 // element
                 "relative",

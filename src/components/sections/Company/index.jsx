@@ -5,6 +5,7 @@ import CompanySubHeading from "./CompanySubHeading.jsx";
 import SectionHeader from "../../ui/Section/SectionHeader";
 
 import { SECTION_COMPANY as SectionContent } from "../../../constants/AppContent.js";
+import { Fragment } from "react";
 
 function CompanySection({ id }) {
     return (
@@ -36,13 +37,15 @@ function CompanySection({ id }) {
                         />
                         <div className="flex flex-col gap-6 leading-loose opacity-75">
                             {SectionContent.about.content.item.map(
-                                (content) => (
-                                    <>
+                                (content, index) => (
+                                    <Fragment
+                                        key={`companySubContent$${index}`}
+                                    >
                                         <h2 className="text-xl font-medium">
                                             {content.title}
                                         </h2>
                                         <p>{content.description}</p>
-                                    </>
+                                    </Fragment>
                                 ),
                             )}
                         </div>

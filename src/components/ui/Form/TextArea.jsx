@@ -23,7 +23,7 @@ function TextArea({ label, id, rows }) {
 
 TextArea.propTypes = {
     label: PropTypes.string,
-    id: PropTypes.number,
+    id: PropTypes.string,
     rows: PropTypes.number,
 };
 

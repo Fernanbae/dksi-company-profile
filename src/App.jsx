@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import CompanySection from "./components/sections/Company";
 import ContactSection from "./components/sections/Contact";
 import HeroSection from "./components/sections/Hero";
@@ -9,6 +11,24 @@ import Footer from "./components/ui/Footer";
 import NavBar from "./components/ui/NavBar";
 
 function App() {
+    useEffect(() => {
+        setTimeout(() => {
+            const targetSection = window.location.hash.substring(1);
+            const section = targetSection
+                ? document.getElementById(targetSection)
+                : null;
+
+            if (section) {
+                section.scrollIntoView();
+                window.history.replaceState(
+                    null,
+                    null,
+                    window.location.pathname,
+                );
+            }
+        }, 250);
+    }, []);
+
     return (
         <>
             <NavBar />

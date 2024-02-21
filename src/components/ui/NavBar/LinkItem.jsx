@@ -12,13 +12,6 @@ function LinkItem({
     className,
     children,
 }) {
-    function handleAnchorClick(event, targetSection) {
-        event.preventDefault();
-
-        const section = document.querySelector(targetSection);
-        section.scrollIntoView();
-    }
-
     const itemClasses =
         "rounded-none md:rounded-md px-0 md:px-3 py-3.5 md:py-2 font-medium text-darken-jungle-green transition md:hover:bg-gray-200 w-full md:w-fit md:border-none border-b border-slate-200";
     const itemHighlightClasses =
@@ -35,7 +28,6 @@ function LinkItem({
             {!dropdown ? (
                 <a
                     href={href}
-                    onClick={(event) => handleAnchorClick(event, href)}
                     className={cn({
                         [itemHighlightClasses]: highlight === true,
                         [itemClasses]: !highlight,
