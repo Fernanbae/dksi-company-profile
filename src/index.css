@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    * {
+        --swiper-pagination-color: theme(colors.darken-jungle-green);
+    }
+
     body {
         @apply bg-ghost-white;
     }
